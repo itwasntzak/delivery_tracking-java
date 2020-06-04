@@ -1,9 +1,9 @@
 import java.io.File;
 
 public class Tip {
-    static int typeCard = 0;
-    static int typeCash = 1;
-    static int typeUnknown = 2;
+    final static int typeCard = 0;
+    final static int typeCash = 1;
+    final static int typeUnknown = 2;
     boolean hasCard = false;
     boolean hasCash = false;
     boolean hasUnknown = false;

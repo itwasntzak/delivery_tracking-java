@@ -27,8 +27,8 @@ public class Shift {
     Split split;
 
     //  list of all local files
-    static File shiftIdsFile = new File("shift_ids.txt");
-    static File shiftsDirectory = new File("shifts");
+    final static File shiftIdsFile = new File("shift_ids.txt");
+    final static File shiftsDirectory = new File("shifts");
     File directory;
     File deliveryIdsFile;
     File extraStopIdsFile;
@@ -464,7 +464,7 @@ public class Shift {
                 idList += shifts.get(base) + ",";
             }
             idList += shifts.get(commaNumber + 1);
-        } catch (IndexOutOfBoundsException e) { ; }
+        } catch (IndexOutOfBoundsException e) { shiftIdsFile.delete(); }
         Utility.writeData(shiftIdsFile, idList);
     }
 

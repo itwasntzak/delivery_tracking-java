@@ -12,14 +12,14 @@ public class DeliveryTracking {
     }
 
     private static void menu(Shift shift) {
-        String prompt = "\nWhat would you like to do?\n" +
-            "D: Start delivery\n" +
-            "E: Start an extra stop\n" +
-            "C: Enter carry out tip\n" +
-            "S: Start split\n" +
-            "X: End shift\n" +
-            "I: Information on shift\n" +
-            "Q: Quit program";
+        String prompt = "\nWhat would you like to do?\n"
+                      + "D: Start delivery\n"
+                      + "E: Start an extra stop\n"
+                      + "C: Enter carry out tip\n"
+                      + "S: Start split\n"
+                      + "X: End shift\n"
+                      + "I: Information on shift\n"
+                      + "Q: Quit program";
         String pattern = "[dDeEcCsSxXiIqQ]{1,1}";
         String userChoice = Utility.getInput(prompt, pattern);
         while (userChoice.matches(pattern)) {
